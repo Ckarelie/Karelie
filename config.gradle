@@ -1,0 +1,13 @@
+ext{
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.3"
+    applicationId = "com.karelie.arch"
+    minSdkVersion = 19
+    targetSdkVersion = 30
+    versionCode = 1
+    versionName = "1.0.0"
+    dependenciess = [
+            "livedata" : "2.2.0",
+            "viewmodel": "2.2.0"
+    ]
+}
