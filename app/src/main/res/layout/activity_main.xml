@@ -6,7 +6,7 @@
     <data>
         <variable
             name="mainModel"
-            type="com.karelie.mvvmdemo.bean.MainModel" />
+            type="com.karelie.mvvmdemo.bean.main.MainModel" />
 
         <variable
             name="onClickListener"

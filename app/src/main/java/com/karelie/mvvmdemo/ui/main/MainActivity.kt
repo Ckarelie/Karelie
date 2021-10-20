@@ -1,9 +1,7 @@
 package com.karelie.mvvmdemo.ui.main
 import  android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.karelie.mvvmdemo.R
-import com.karelie.mvvmdemo.bean.MainViewModel
+import com.karelie.mvvmdemo.bean.main.MainViewModel
 import com.karelie.mvvmdemo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,5 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bingding = ActivityMainBinding.inflate(layoutInflater)
+
     }
 }

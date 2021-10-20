@@ -8,6 +8,15 @@ ext{
     versionName = "1.0.0"
     dependenciess = [
             "livedata" : "2.2.0",
-            "viewmodel": "2.2.0"
+            "viewmodel": "2.2.0",
+            "kotlinxCoroutinesVersion" : "1.3.8",
+            "retrofitVersion" : "2.6.0",
+            "retrofitConverterGsonVersion" : "2.3.0",
+            "retrofitConverterScalarsVersion" :"2.5.0",
+            "mmkvVersion" : "1.0.23",
+            "viewPager2Version" : "1.1.0-alpha01",
+            "glideVersion" : "4.10.0",
+            "lifecycleExtensionsVersion" : "2.2.0",
+            "navigationVersion" : "2.3.0",
     ]
 }
