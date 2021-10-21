@@ -18,5 +18,8 @@ ext{
             "glideVersion" : "4.10.0",
             "lifecycleExtensionsVersion" : "2.2.0",
             "navigationVersion" : "2.3.0",
+            "okhttp3" : "4.9.0",
+            "loggin_interceptor" : "4.9.0",
+            "room" : "2.3.0-alpha01"
     ]
 }

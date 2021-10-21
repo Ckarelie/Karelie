@@ -1,3 +1,5 @@
 rootProject.name = "MvvmApplication"
 include ':app'
 include ':arch'
+include ':commom'
+include ':service'

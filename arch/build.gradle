@@ -86,6 +86,16 @@ dependencies {
     api "androidx.navigation:navigation-fragment-ktx:$rootProject.ext.dependenciess.navigationVersion"
     api "androidx.navigation:navigation-ui-ktx:$rootProject.ext.dependenciess.navigationVersion"
 
+    //拦截器
+    api "com.squareup.okhttp3:okhttp:$rootProject.ext.dependenciess.okhttp3"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.dependenciess.loggin_interceptor"
+
+    //room
+    api "androidx.room:room-runtime:$rootProject.ext.dependenciess.room"
+    api "androidx.room:room-common:$rootProject.ext.dependenciess.room"
+    api "androidx.room:room-ktx:$rootProject.ext.dependenciess.room"
+    kapt "androidx.room:room-compiler:$rootProject.ext.dependenciess.room"
+
 }
 repositories {
     mavenCentral()
