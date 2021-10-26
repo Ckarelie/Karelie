@@ -1,10 +1,7 @@
-
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
-apply plugin: 'kotlin-android'
-
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -16,12 +13,40 @@ android {
         versionName rootProject.ext.versionName
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+    }
+
+    signingConfigs {
+        debug{
+            storeFile file("../kareliekey.jks")
+            storePassword "111111"
+            keyAlias "key0"
+            keyPassword "111111"
+        }
+
+        release {
+            storeFile file("../kareliekey.jks")
+            storePassword "111111"
+            keyAlias "key0"
+            keyPassword "111111"
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug{
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -37,7 +62,6 @@ android {
         dataBinding true
     }
 
-
 }
 
 dependencies {
@@ -52,8 +76,16 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "androidx.core:core-ktx:+"
 
+    //optional, help to generate the final application
+    provided('com.tencent.tinker:tinker-android-anno:1.9.1')
+    //tinker's main Android lib
+    compile('com.tencent.tinker:tinker-android-lib:1.9.1')
+
 
 }
 repositories {
     mavenCentral()
 }
+
+apply from: "tinker-support.gradle"
+apply plugin: 'com.tencent.tinker.patch'

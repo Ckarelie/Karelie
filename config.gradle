@@ -1,5 +1,5 @@
 ext{
-    compileSdkVersion = 30
+    compileSdkVersion = 31
     buildToolsVersion = "30.0.3"
     applicationId = "com.karelie.arch"
     minSdkVersion = 19
@@ -20,6 +20,11 @@ ext{
             "navigationVersion" : "2.3.0",
             "okhttp3" : "4.9.0",
             "loggin_interceptor" : "4.9.0",
-            "room" : "2.3.0-alpha01"
+            "room" : "2.3.0-alpha01",
+            "multidex" : "2.0.0",
+            "crashreport_upgrade" : "1.3.6",
+            "tinker_android_lib" : "1.9.14.18",
+            "nativecrashreport" : "latest.release",
     ]
+
 }

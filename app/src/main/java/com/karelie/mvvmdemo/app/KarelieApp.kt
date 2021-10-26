@@ -1,4 +1,4 @@
-package com.karelie.mvvmdemo
+package com.karelie.mvvmdemo.app
 
 import android.app.Application
 

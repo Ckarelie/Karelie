@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/app/src/main/res/layout/activity_main.xml" value="0.30480072463768115" />
+        <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/app/src/main/res/xml/provider_paths.xml" value="0.17477203647416414" />
       </map>
     </option>
   </component>
@@ -12,5 +13,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.30480072463768115" />
+      </ProjectState>
+    </option>
   </component>
 </project>
