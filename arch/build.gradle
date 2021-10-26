@@ -84,6 +84,10 @@ dependencies {
     api "com.tencent.tinker:tinker-android-lib:$rootProject.ext.dependenciess.tinker_android_lib"
     api "com.tencent.bugly:nativecrashreport:$rootProject.ext.dependenciess.nativecrashreport" //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 
+
+    //LiveEventBus
+    api "$rootProject.ext.dependenciess.livedatabus"
+
 }
 repositories {
     mavenCentral()

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="mainModel"
-            type="com.karelie.mvvmdemo.bean.main.MainModel" />
+            type="com.karelie.mvvmdemo.bean.main.MainData" />
 
         <variable
             name="onClickListener"
@@ -21,9 +21,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{mainModel.title}"
+            android:text="@{mainModel.nickname}"
             />
-
 
         <TextView
             android:id="@+id/tv_test"
@@ -32,5 +31,19 @@
             android:text="你好"
             android:textSize="30dp"
             ></TextView>
+
+        <Button
+            android:id="@+id/main_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            ></Button>
+
+        <Button
+            android:id="@+id/main_clickforplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重置"
+            ></Button>
     </LinearLayout>
 </layout>

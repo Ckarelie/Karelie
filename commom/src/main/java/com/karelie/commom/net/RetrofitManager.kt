@@ -7,8 +7,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-
-
 private const val TAG = "RetrofitManager"
 class RetrofitManager {
     private val mOkClient = OkHttpClient.Builder()
