@@ -1,10 +1,9 @@
-package com.karelie.mvvmdemo.bean.main
+package com.karelie.mvvmdemo.di
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.karelie.commom.support.StateLiveData
 import com.karelie.mvvmdemo.base.BaseViewModel
-import retrofit2.Retrofit
+import com.karelie.mvvmdemo.bean.main.MainData
+import com.karelie.mvvmdemo.bean.main.MainRepository
 
 class MainViewModel : BaseViewModel() {
     private val repository by lazy { MainRepository() }
