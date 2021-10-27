@@ -1,5 +1,7 @@
 package com.karelie.mvvmdemo.ui.main
 import  android.os.Bundle
+import android.view.Gravity
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.karelie.mvvmdemo.bean.main.MainData

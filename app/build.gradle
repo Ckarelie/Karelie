@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -22,7 +23,7 @@ android {
     }
 
     signingConfigs {
-        debug{
+        debug {
             storeFile file("../kareliekey.jks")
             storePassword "111111"
             keyAlias "key0"
@@ -44,7 +45,7 @@ android {
             signingConfig signingConfigs.release
         }
 
-        debug{
+        debug {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug
         }
@@ -80,6 +81,8 @@ dependencies {
     provided('com.tencent.tinker:tinker-android-anno:1.9.1')
     //tinker's main Android lib
     compile('com.tencent.tinker:tinker-android-lib:1.9.1')
+
+    implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.3'
 
 
 }

@@ -89,11 +89,6 @@ dependencies {
     //LiveEventBus
     api "$rootProject.ext.dependenciess.livedatabus"
 
-    //Adapter
-    api "$rootProject.ext.dependenciess.bindingcollectionadapter"
-    api "$rootProject.ext.dependenciess.bindingcollectionadapter_recyclerview"
-    api "$rootProject.ext.dependenciess.bindingcollectionadapter_viewpager2"
-
 }
 repositories {
     mavenCentral()
