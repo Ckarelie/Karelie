@@ -40,6 +40,4 @@ open class BaseViewModel : ViewModel(){
             }
         }
     }
-
-
 }

@@ -85,6 +85,12 @@ dependencies {
     api "$rootProject.ext.dependenciess.tinker_android_lib"
     api "$rootProject.ext.dependenciess.nativecrashreport" //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 
+    // Koin main features for Android (Scope,ViewModel ...)
+    api "$rootProject.ext.dependenciess.koin_android"
+    // Koin Java Compatibility
+    api "$rootProject.ext.dependenciess.koin_android_compat"
+
+
 
     //LiveEventBus
     api "$rootProject.ext.dependenciess.livedatabus"

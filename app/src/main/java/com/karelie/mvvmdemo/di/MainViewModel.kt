@@ -5,7 +5,6 @@ import com.karelie.mvvmdemo.base.BaseViewModel
 import com.karelie.mvvmdemo.bean.main.MainData
 import com.karelie.mvvmdemo.bean.main.MainRepository
 
-
 class MainViewModel : BaseViewModel() {
     private val repository by lazy { MainRepository() }
     val userLiveData = StateLiveData<MainData?>()

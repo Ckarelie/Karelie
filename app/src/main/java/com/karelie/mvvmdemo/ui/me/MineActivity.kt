@@ -14,6 +14,5 @@ class MineActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bingding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bingding.root)
-
     }
 }

@@ -43,4 +43,5 @@ class RetrofitManager {
             return mRetrofit!!.create(serviceClass)
         }
     }
+
 }

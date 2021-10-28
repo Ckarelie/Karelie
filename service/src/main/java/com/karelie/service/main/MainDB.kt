@@ -9,4 +9,6 @@ abstract class MainDB : RoomDatabase() {
         val infor : String
     )
 
+
+
 }

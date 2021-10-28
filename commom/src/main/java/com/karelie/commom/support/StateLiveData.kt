@@ -43,7 +43,7 @@ class StateLiveData <T> : MutableLiveData<BaseResp<T>>() {
         internal var mCompleteListenerAction: (() -> Unit)? = null
         internal var mFailedListenerAction: ((Int?, String?) -> Unit)? = null
 
-        fun onSuccess(action: (T) -> Unit) {
+        fun onSuccess(action: (Any?) -> Unit) {
             mSuccessListenerAction = action
         }
 

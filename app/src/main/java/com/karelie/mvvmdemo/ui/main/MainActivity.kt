@@ -1,16 +1,21 @@
 package com.karelie.mvvmdemo.ui.main
 import  android.os.Bundle
-import android.view.Gravity
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.karelie.commom.support.StateLiveData
 import com.karelie.mvvmdemo.bean.main.MainData
+
 import com.karelie.mvvmdemo.di.MainViewModel
 import com.karelie.mvvmdemo.databinding.ActivityMainBinding
-
+import com.karelie.service.main.MineEnity
+import com.karelie.service.main.MineTwoEnity
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 class MainActivity : AppCompatActivity() {
+    val mineData by inject<MineEnity>()
+    val twoData by inject<MineTwoEnity>()
     lateinit var bingding : ActivityMainBinding
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel : MainViewModel by viewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bingding = ActivityMainBinding.inflate(layoutInflater)
@@ -21,12 +26,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initObserver() {
         viewModel.userLiveData.obserState(this){
-            onSuccess { result : MainData? ->
-                result?.let {
-                    val data : String? = result.nickname
-                    bingding.tvTest.text = "欢迎登录：" +data
-                }
-            }
+          onSuccess {
+              it as MainData
+              bingding.tvTest.text = it.nickname
+          }
         }
     }
 
