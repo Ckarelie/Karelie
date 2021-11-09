@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+//    id 'com.didi.dokit'
 }
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -21,6 +22,19 @@ android {
         }
 
     }
+
+//    dokitExt{
+//        comm {
+//            //地图经纬度开关
+//            gpsSwitch true
+//            //网络开关
+//            networkSwitch true
+//            //大图开关
+//            bigImgSwitch true
+//            //webView js 抓包
+//            webViewSwitch true
+//        }
+//    }
 
     signingConfigs {
         debug {
@@ -72,6 +86,8 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -83,6 +99,9 @@ dependencies {
     compile('com.tencent.tinker:tinker-android-lib:1.9.1')
 
     implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.3'
+
+    debugImplementation 'io.github.didi.dokit:dokitx:3.5.0'
+    releaseImplementation 'io.github.didi.dokit:dokitx-no-op:3.5.0'
 
 
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_main"
+        android:enabled="true"
+        android:icon="@drawable/main_input_bg"
+        android:title="主页"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/menu_mine"
+        android:enabled="true"
+        android:icon="@color/background_info"
+        android:title="我的"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

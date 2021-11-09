@@ -3,6 +3,8 @@ package com.karelie.mvvmdemo.app
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
+import com.didi.drouter.api.DRouter
+import com.didichuxing.doraemonkit.DoKit
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.karelie.commom.net.BaseRepository
 import com.karelie.mvvmdemo.di.MainViewModel
@@ -27,6 +29,9 @@ class KarelieApp: Application() {
         // 调试时，将第三个参数改为true
         Bugly.init(this, "910ab0e291", false)
         DeviceIdentifier.register(this)
+        DoKit.Builder(this)
+            .build()
+        DRouter.init(this)
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(this@KarelieApp)
