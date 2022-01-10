@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.karelie.mvvmdemo.R
 import com.karelie.mvvmdemo.databinding.FragmentMainBinding
+import me.majiajie.pagerbottomtabstrip.NavigationController
+import me.majiajie.pagerbottomtabstrip.PageNavigationView
 
 class MainFragment : Fragment() {
     lateinit var binding: FragmentMainBinding
@@ -16,6 +18,12 @@ class MainFragment : Fragment() {
     ): View? {
         binding = FragmentMainBinding.inflate(layoutInflater)
         return binding.root
+        initData()
+    }
+
+    private fun initData() {
+        val controll  = binding.tab.material()
+            .build()
     }
 
 }

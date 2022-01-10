@@ -49,7 +49,7 @@ class KarelieApp: Application() {
         // you must install multiDex whatever tinker is installed!
         MultiDex.install(base)
         // 安装tinker
-        Beta.installTinker()
+//        Beta.installTinker()
     }
 
     val viewModel = module {

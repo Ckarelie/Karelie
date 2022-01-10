@@ -1,7 +1,7 @@
 plugins {
-    id   'com.android.library'
-    id   'kotlin-android'
-    id   'kotlin-kapt'
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -23,8 +23,13 @@ android {
         }
     }
 
-}
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
 
 
 dependencies {
@@ -38,7 +43,7 @@ dependencies {
     api "$rootProject.ext.dependenciess.livedata"
     //ViewModel
     api "$rootProject.ext.dependenciess.viewmodel"
-    api "androidx.core:core-ktx:+"
+//    api "androidx.core:core-ktx:+"
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Kotlin
@@ -60,7 +65,7 @@ dependencies {
     api "$rootProject.ext.dependenciess.viewPager2Version"
 
     // Glide
-    api  "$rootProject.ext.dependenciess.glideVersion"
+    api "$rootProject.ext.dependenciess.glideVersion"
     kapt "$rootProject.ext.dependenciess.glideCompiler"
 
     // Lifecycle Extensions
@@ -85,7 +90,8 @@ dependencies {
     api "$rootProject.ext.dependenciess.crashreport_upgrade"
     // 指定tinker依赖版本（注：应用升级1.3.5版本起，不再内置tinker）
     api "$rootProject.ext.dependenciess.tinker_android_lib"
-    api "$rootProject.ext.dependenciess.nativecrashreport" //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    api "$rootProject.ext.dependenciess.nativecrashreport"
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 
     // Koin main features for Android (Scope,ViewModel ...)
     api "$rootProject.ext.dependenciess.koin_android"
@@ -97,6 +103,28 @@ dependencies {
     api "$rootProject.ext.dependenciess.didi_root_api"
     //PagerBottomTabStrip
     api "$rootProject.ext.dependenciess.PagerBottomTabStrip"
+
+    //compose
+    api "$rootProject.ext.dependenciess.compose_ui"
+    api "$rootProject.ext.dependenciess.compose_ui_tooling"
+    api "$rootProject.ext.dependenciess.compose_foundation"
+    api "$rootProject.ext.dependenciess.compose_material"
+    api "$rootProject.ext.dependenciess.compose_icons_core"
+    api "$rootProject.ext.dependenciess.compose_icons_extended"
+    api "$rootProject.ext.dependenciess.compose_livedata"
+    api "$rootProject.ext.dependenciess.compose_rxjava"
+    api "$rootProject.ext.dependenciess.compose_ui_test"
+    api "$rootProject.ext.dependenciess.compose_ui_tooling_preview"
+    api "$rootProject.ext.dependenciess.compose_activity"
+
+    //CN_OAID
+    api "$rootProject.ext.dependenciess.CN_OAID"
+
+    //ToastUtils
+    api "$rootProject.ext.dependenciess.ToastUtils"
+    api "$rootProject.ext.dependenciess.XToast"
+
+//    api "$rootProject.ext.dependenciess.ktkit"
 
 }
 repositories {

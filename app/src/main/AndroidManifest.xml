@@ -20,8 +20,10 @@
         android:theme="@style/Theme.MvvmApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".fragment_main"
-            android:exported="false" />
+            android:name=".ui.compose.Compose"
+            android:exported="false"
+            android:label="@string/title_activity_compose"
+            android:theme="@style/Theme.MvvmApplication.NoActionBar" />
 
         <provider
             android:name=".utils.BuglyFileProvider"
@@ -35,7 +37,7 @@
                 tools:replace="name,resource" />
         </provider>
 
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.login.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,6 +48,10 @@
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent" />
+
+        <activity android:name=".ui.compose.ComposeActivity"/>
+        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.me.MineActivity"/>
     </application>
 
 </manifest>

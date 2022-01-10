@@ -1,4 +1,5 @@
 package com.karelie.mvvmdemo.ui.main
+import android.content.Intent
 import  android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.karelie.mvvmdemo.bean.main.MainData
 
 import com.karelie.mvvmdemo.di.MainViewModel
 import com.karelie.mvvmdemo.databinding.ActivityMainBinding
+import com.karelie.mvvmdemo.ui.compose.ComposeActivity
 import com.karelie.mvvmdemo.ui.viewpager.MainFragment
 import com.karelie.mvvmdemo.ui.viewpager.MeFragment
 import com.karelie.mvvmdemo.ui.viewpager.VPAdapter
@@ -30,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         initData()
         initOnClick()
         initObserver()
+
+
     }
 
     private fun initObserver() {
@@ -49,6 +53,7 @@ class MainActivity : AppCompatActivity() {
                 vpMain.isUserInputEnabled = true
             }.attach()
         }
+
     }
 
     private fun initOnClick() {
@@ -57,6 +62,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.mainClickforplay.setOnClickListener {
             binding.tvTest.text = ""
+        }
+        binding.btnComposeview.setOnClickListener {
+            var intent : Intent? = Intent(this,ComposeActivity::class.java)
+            startActivity(intent)
         }
     }
 

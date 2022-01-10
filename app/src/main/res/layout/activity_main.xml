@@ -61,7 +61,23 @@
             app:layout_constraintStart_toEndOf="@+id/main_login"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <Button
+            android:id="@+id/btn_composeview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="28dp"
+            android:text="ComposeView"
+            app:layout_constraintBottom_toTopOf="@+id/main_clickforplay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <EditText
+            android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="-1dp"
             android:layout_margin="20dp"
@@ -84,7 +100,10 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_login"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="1.0" >
+
+        </androidx.viewpager2.widget.ViewPager2>
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnv_main"
