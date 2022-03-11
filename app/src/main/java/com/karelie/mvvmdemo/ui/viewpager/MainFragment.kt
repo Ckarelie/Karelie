@@ -1,6 +1,7 @@
 package com.karelie.mvvmdemo.ui.viewpager
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +25,20 @@ class MainFragment : Fragment() {
     private fun initData() {
         val controll  = binding.tab.material()
             .build()
+        fun newFunction.doThree() = { karelie()}
     }
+
+
+    class newFunction{
+        fun doOne()= { karelie() }
+
+        fun doTwo() = { karelie() }
+
+        fun karelie(){}
+    }
+
+
+
+
 
 }

@@ -120,9 +120,13 @@ dependencies {
     //CN_OAID
     api "$rootProject.ext.dependenciess.CN_OAID"
 
-    //ToastUtils
-    api "$rootProject.ext.dependenciess.ToastUtils"
-    api "$rootProject.ext.dependenciess.XToast"
+        //ToastUtils
+        api "$rootProject.ext.dependenciess.ToastUtils"
+        api "$rootProject.ext.dependenciess.XToast"
+
+    //Adapter
+    api "$rootProject.ext.dependenciess.BaseQuickAdapter"
+    api "$rootProject.ext.dependenciess.ByRecyclerView"
 
 //    api "$rootProject.ext.dependenciess.ktkit"
 

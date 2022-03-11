@@ -8,11 +8,10 @@ import com.didichuxing.doraemonkit.DoKit
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.karelie.commom.net.BaseRepository
 import com.karelie.mvvmdemo.di.MainViewModel
-import com.karelie.mvvmdemo.net.RetrofitClient
+import com.karelie.commom.net.RetrofitClient
 import com.karelie.service.main.MineEnity
 import com.karelie.service.main.MineTwoEnity
 import com.tencent.bugly.Bugly
-import com.tencent.bugly.beta.Beta
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
@@ -68,5 +67,11 @@ class KarelieApp: Application() {
     val utilsModel = module {
         factory { MineEnity(this@KarelieApp) }
         factory { MineTwoEnity(get()) }
+    }
+
+    val secondModel = module {
+        factory {
+
+        }
     }
 }

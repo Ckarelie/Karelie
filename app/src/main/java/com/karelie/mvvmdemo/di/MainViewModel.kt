@@ -2,8 +2,8 @@ package com.karelie.mvvmdemo.di
 
 import com.karelie.commom.support.StateLiveData
 import com.karelie.mvvmdemo.base.BaseViewModel
-import com.karelie.mvvmdemo.bean.main.MainData
-import com.karelie.mvvmdemo.bean.main.MainRepository
+import com.karelie.mvvmdemo.resp.main.MainData
+import com.karelie.mvvmdemo.resp.main.MainRepository
 
 class MainViewModel : BaseViewModel() {
     private val repository by lazy { MainRepository() }

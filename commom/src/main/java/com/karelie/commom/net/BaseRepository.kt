@@ -1,12 +1,15 @@
 package com.karelie.commom.net
 
+import android.app.PendingIntent.getService
+import android.app.Service
 import com.karelie.commom.BuildConfig
 import com.karelie.commom.net.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
+import okhttp3.OkHttpClient
 import java.util.*
 
-open class BaseRepository() {
+open class BaseRepository() : BaseRetrofitClient(){
     suspend fun <T> executeHttp(block: suspend () -> BaseResp<T>): BaseResp<T> {
         //for test
         delay(500)
@@ -52,4 +55,10 @@ open class BaseRepository() {
             ApiSuccessResponse(data)
         }
     }
+
+    val service by lazy { getService(AppApiService::class.java, ApiService.BASE_URL) }
+    override fun handleBuilder(builder: OkHttpClient.Builder) = Unit
+
+
+
 }

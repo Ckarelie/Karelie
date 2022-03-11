@@ -1,7 +1,5 @@
-package com.karelie.mvvmdemo.net
+package com.karelie.commom.net
 
-import com.karelie.commom.net.ApiService
-import com.karelie.commom.net.BaseRetrofitClient
 import okhttp3.OkHttpClient
 
 object RetrofitClient : BaseRetrofitClient() {

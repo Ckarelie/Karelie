@@ -1,4 +1,4 @@
-package com.karelie.mvvmdemo.bean.mine
+package com.karelie.commom.data
 
 data class MineData(
     val id : Int,

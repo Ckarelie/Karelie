@@ -20,7 +20,10 @@ buildscript {
 //        classpath "com.tencent.bugly:tinker-support:1.2.3"
 
         classpath 'io.github.didi.dokit:dokitx-plugin:3.5.0'
-        classpath "io.github.didi:drouter-plugin-proxy:1.0.1"
+        classpath "io.github.didi:drouter-plugin-proxy:1.0.2"
+
+        //Java代码依赖
+//        api "io.github.didi:drouter-api:2.2.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

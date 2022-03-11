@@ -7,7 +7,7 @@ import androidx.core.view.forEachIndexed
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.karelie.mvvmdemo.bean.main.MainData
+import com.karelie.mvvmdemo.resp.main.MainData
 
 import com.karelie.mvvmdemo.di.MainViewModel
 import com.karelie.mvvmdemo.databinding.ActivityMainBinding
@@ -19,6 +19,8 @@ import com.karelie.service.main.MineEnity
 import com.karelie.service.main.MineTwoEnity
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlin.math.absoluteValue
+
 class MainActivity : AppCompatActivity() {
     val mineData by inject<MineEnity>()
     val twoData by inject<MineTwoEnity>()
@@ -67,6 +69,16 @@ class MainActivity : AppCompatActivity() {
             var intent : Intent? = Intent(this,ComposeActivity::class.java)
             startActivity(intent)
         }
+
+        val list = listOf<checkList>(
+            checkList("1",3),
+            checkList("2",2),
+            checkList("3",1)
+        )
+    }
+
+    fun getAbNumber(number:Double): Double {
+        return number.absoluteValue
     }
 
     //index
@@ -80,6 +92,7 @@ class MainActivity : AppCompatActivity() {
     )
 }
 
+data class checkList(val name:String, val other:Any)
 
 /**
  * @Creator:Karelie

@@ -1,4 +1,4 @@
-package com.karelie.mvvmdemo.bean.main
+package com.karelie.mvvmdemo.resp.main
 
 data class MainData(
     var title: MainData?,
