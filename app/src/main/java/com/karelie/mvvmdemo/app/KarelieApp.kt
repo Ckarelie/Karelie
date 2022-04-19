@@ -6,11 +6,14 @@ import androidx.multidex.MultiDex
 import com.didi.drouter.api.DRouter
 import com.didichuxing.doraemonkit.DoKit
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
+import com.hjq.toast.ToastUtils
 import com.karelie.commom.net.BaseRepository
 import com.karelie.mvvmdemo.di.MainViewModel
 import com.karelie.commom.net.RetrofitClient
 import com.karelie.service.main.MineEnity
 import com.karelie.service.main.MineTwoEnity
+import com.kongzue.dialogx.DialogX
+import com.kongzue.dialogx.style.IOSStyle
 import com.tencent.bugly.Bugly
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidFileProperties
@@ -28,11 +31,14 @@ class KarelieApp: Application() {
         // 调试时，将第三个参数改为true
         Bugly.init(this, "910ab0e291", false)
         DeviceIdentifier.register(this)
+        DialogX.init(this)
+        DialogX.globalStyle = IOSStyle()
         DoKit.Builder(this)
             .build()
         DRouter.init(this)
+        ToastUtils.init(this)
         startKoin {
-            androidLogger(Level.DEBUG)
+            androidLogger(Level.NONE)
             androidContext(this@KarelieApp)
             androidFileProperties()
             modules(listOf(

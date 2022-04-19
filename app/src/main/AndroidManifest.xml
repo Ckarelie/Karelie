@@ -9,7 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:name=".app.KarelieApp"
         android:allowBackup="true"
@@ -50,7 +51,9 @@
             android:theme="@android:style/Theme.Translucent" />
 
         <activity android:name=".ui.compose.ComposeActivity"/>
-        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            />
         <activity android:name=".ui.me.MineActivity"/>
     </application>
 

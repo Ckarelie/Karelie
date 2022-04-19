@@ -19,7 +19,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
+        <com.karelie.commom.widget.KarelieTopBar
+            android:id="@+id/ktb_main"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="712dp"
@@ -35,6 +45,7 @@
             android:layout_height="wrap_content"
             android:text="你好"
             android:textSize="30dp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,6 +82,7 @@
             android:layout_marginEnd="17dp"
             android:layout_marginBottom="28dp"
             android:text="ComposeView"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/main_clickforplay"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/editText"
@@ -85,6 +97,7 @@
             android:layout_marginEnd="286dp"
             android:background="@drawable/main_input_bg"
             android:hint="请输入一段文字"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,6 +126,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
             app:menu="@menu/main_bottom_navigation"
             />
 

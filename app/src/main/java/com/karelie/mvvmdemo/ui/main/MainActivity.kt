@@ -1,12 +1,30 @@
 package com.karelie.mvvmdemo.ui.main
 import android.content.Intent
+import android.location.LocationManager
+import android.os.Build
 import  android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.graphics.Color
 import androidx.core.view.forEachIndexed
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.didi.drouter.annotation.Router
+import com.didi.drouter.api.DRouter
+import com.didi.drouter.api.Extend
+import com.didi.drouter.router.Result
+import com.didi.drouter.router.RouterCallback
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.hjq.toast.ToastUtils
+import com.karelie.commom.base.BaseActivity
+import com.karelie.commom.base.CommomAdapter
+import com.karelie.commom.router.Router.SecondMoudle.secondMain
+import com.karelie.commom.utils.toast
+import com.karelie.commom.widget.initBack
+
+import com.karelie.mvvmdemo.R
 import com.karelie.mvvmdemo.resp.main.MainData
 
 import com.karelie.mvvmdemo.di.MainViewModel
@@ -17,16 +35,23 @@ import com.karelie.mvvmdemo.ui.viewpager.MeFragment
 import com.karelie.mvvmdemo.ui.viewpager.VPAdapter
 import com.karelie.service.main.MineEnity
 import com.karelie.service.main.MineTwoEnity
+import com.kongzue.dialogx.dialogs.MessageDialog
+import com.kongzue.dialogx.dialogs.TipDialog
+import com.kongzue.dialogx.dialogs.WaitDialog
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.math.absoluteValue
 
-class MainActivity : AppCompatActivity() {
+@Router(path = "/main")
+class MainActivity : BaseActivity<ActivityMainBinding>() {
     val mineData by inject<MineEnity>()
     val twoData by inject<MineTwoEnity>()
     lateinit var binding : ActivityMainBinding
     private val viewModel : MainViewModel by viewModel()
+    private val mAdapter: CommomAdapter by lazy { CommomAdapter(arrayListOf()) }
     private val config: ((BottomNavigationView, ViewPager2) -> Unit)? = null
+    var manger: LocationManager? = null
+    private val TAG:String = "MainMoudle_MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -34,7 +59,6 @@ class MainActivity : AppCompatActivity() {
         initData()
         initOnClick()
         initObserver()
-
 
     }
 
@@ -45,7 +69,23 @@ class MainActivity : AppCompatActivity() {
               binding.tvTest.text = it.nickname
           }
         }
+
+        val b = showBase("a dui ")
+        showWt(b).showToast()
+
     }
+
+    interface Base{
+       fun showToast()
+    }
+    class showBase(val message:String):Base{
+        override fun showToast() {
+            Log.i("KarelieWt", "showToast: "+message)
+        }
+    }
+
+    class showWt(b:Base): Base by b
+
 
     private fun initData() {
         config?.invoke(binding.bnvMain,binding.vpMain)
@@ -54,7 +94,20 @@ class MainActivity : AppCompatActivity() {
             BnvVp2Mediator(binding.bnvMain,binding.vpMain){bnvMain,vpMain ->
                 vpMain.isUserInputEnabled = true
             }.attach()
+
+            ktbMain.initBack(R.mipmap.back_topbar,"主页","分享",{finish()}) {
+                DRouter.build(secondMain)
+                    .putExtra("jump","1")
+                    .start(this@MainActivity){
+                        if (it.isActivityStarted){
+                            Log.i(TAG, "Jump Status: "+"===Success===")
+                        }
+                    }
+            }
+
+
         }
+
 
     }
 

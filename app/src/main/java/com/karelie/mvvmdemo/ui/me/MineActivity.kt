@@ -19,7 +19,7 @@ class MineActivity : AppCompatActivity() {
     private val viewModel by viewModels<MineViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bingding = ActivityMainBinding.inflate(layoutInflater)
+        bingding = ActivityMineBinding.inflate(layoutInflater)
         setContentView(bingding.root)
         initOnClick()
     }

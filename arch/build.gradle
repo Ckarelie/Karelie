@@ -105,17 +105,11 @@ dependencies {
     api "$rootProject.ext.dependenciess.PagerBottomTabStrip"
 
     //compose
-    api "$rootProject.ext.dependenciess.compose_ui"
-    api "$rootProject.ext.dependenciess.compose_ui_tooling"
-    api "$rootProject.ext.dependenciess.compose_foundation"
+    api "$rootProject.ext.dependenciess.compose_activities"
     api "$rootProject.ext.dependenciess.compose_material"
-    api "$rootProject.ext.dependenciess.compose_icons_core"
-    api "$rootProject.ext.dependenciess.compose_icons_extended"
-    api "$rootProject.ext.dependenciess.compose_livedata"
-    api "$rootProject.ext.dependenciess.compose_rxjava"
-    api "$rootProject.ext.dependenciess.compose_ui_test"
-    api "$rootProject.ext.dependenciess.compose_ui_tooling_preview"
-    api "$rootProject.ext.dependenciess.compose_activity"
+    api "$rootProject.ext.dependenciess.compose_animation"
+    api "$rootProject.ext.dependenciess.compose_ui_tooling"
+    api "$rootProject.ext.dependenciess.compose_lifecycle_viewmodel"
 
     //CN_OAID
     api "$rootProject.ext.dependenciess.CN_OAID"
@@ -128,7 +122,16 @@ dependencies {
     api "$rootProject.ext.dependenciess.BaseQuickAdapter"
     api "$rootProject.ext.dependenciess.ByRecyclerView"
 
+    //DialogX
+    api "$rootProject.ext.dependenciess.DialogX"
+    //IOS主题窗口
+    api "$rootProject.ext.dependenciess.DialogX_STYLE_IOS"
+
 //    api "$rootProject.ext.dependenciess.ktkit"
+
+    //RxHttp
+    api "$rootProject.ext.dependenciess.RxHttp"
+    kapt "$rootProject.ext.dependenciess.Rxhttp_compiler"
 
 }
 repositories {

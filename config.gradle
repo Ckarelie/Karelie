@@ -6,10 +6,12 @@ ext {
     targetSdkVersion = 30
     versionCode = 1
     versionName = "1.0.0"
-    kotlin_version = "1.5.31"
+    kotlin_version = "1.6.20"
     koin_version = "3.1.2"
     ktkitVersion = "v1.0.2"
-    composeVersion = "1.0.5"
+    composeVersion = "1.1.1"
+    okhttpVersion = "4.9.0"
+    dialogx_version = "0.0.43.beta13"
     dependenciess = [
             "livedata"                             : "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0",
             "viewmodel"                            : "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0",
@@ -30,8 +32,8 @@ ext {
             "navigationVersion"                    : "androidx.navigation:navigation-fragment-ktx:2.3.0",
             "navigationUi"                         : "androidx.navigation:navigation-ui-ktx:2.3.0",
 
-            "okhttp3"                              : "com.squareup.okhttp3:okhttp:4.9.0",
-            "loggin_interceptor"                   : "com.squareup.okhttp3:logging-interceptor:4.9.0",
+            "okhttp3"                              : "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            "loggin_interceptor"                   : "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
 
             "room"                                 : "2.3.0-alpha01",
             "multidex"                             : "androidx.multidex:multidex:2.0.0",
@@ -59,33 +61,35 @@ ext {
             //底部导航栏
             "PagerBottomTabStrip"                  : "me.majiajie:pager-bottom-tab-strip:2.4.0",
             //Compose
-            "compose_ui"                           : "androidx.compose.ui:ui:$composeVersion",
-            "compose_ui_tooling"                   : "androidx.compose.ui:ui-tooling:$composeVersion",
-            "compose_foundation"                   : "androidx.compose.foundation:foundation:$composeVersion",
-            "compose_material"                     : "androidx.compose.material:material:$composeVersion",
-            "compose_icons_core"                   : "androidx.compose.material:material-icons-core:$composeVersion",
-            "compose_icons_extended"               : "androidx.compose.material:material-icons-extended:$composeVersion",
-            "compose_livedata"                     : "androidx.compose.runtime:runtime-livedata:$composeVersion",
-            "compose_rxjava"                       : "androidx.compose.runtime:runtime-rxjava2:$composeVersion",
-            "compose_ui_test"                      : "androidx.compose.ui:ui-test-junit4:$composeVersion",
-            "compose_ui_tooling_preview"           : "androidx.compose.ui:ui-tooling-preview:$composeVersion",
-            "compose_activity"                     : "androidx.activity:activity-compose:1.3.0-alpha06",
+            "compose_activities"                   : "androidx.activity:activity-compose:1.4.0",
+            "compose_material"                     : "androidx.compose.material:material:1.1.1",
+            "compose_animation"                    : "androidx.compose.animation:animation:1.1.1",
+            "compose_ui_tooling"                   : "androidx.compose.ui:ui-tooling:1.1.1",
+            "compose_lifecycle_viewmodel"          : "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1",
+
             //Ktkit
             "ktkit"                                : "com.hi-dhl:ktkit:$ktkitVersion",
             //Dokit
-            "dokitx":"io.github.didi.dokit:dokitx:3.5.0",
-            "dokit_no_op":"io.github.didi.dokit:dokitx-no-op:3.5.0",
+            "dokitx"                               : "io.github.didi.dokit:dokitx:3.5.0",
+            "dokit_no_op"                          : "io.github.didi.dokit:dokitx-no-op:3.5.0",
             //Android_CN_OAID
-            "CN_OAID":"com.github.gzu-liyujiang:Android_CN_OAID:4.2.3",
+            "CN_OAID"                              : "com.github.gzu-liyujiang:Android_CN_OAID:4.2.3",
 
             //ToastUtils
-            "ToastUtils" : "com.github.getActivity:ToastUtils:10.0",
-            "XToast" : "com.github.getActivity:XToast:8.3",
+            "ToastUtils"                           : "com.github.getActivity:ToastUtils:10.0",
+            "XToast"                               : "com.github.getActivity:XToast:8.3",
 
             //Adapter
-            "BaseQuickAdapter" : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7',
-            "ByRecyclerView" : 'com.github.youlookwhat:ByRecyclerView:1.3.0'
+            "BaseQuickAdapter"                     : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7',
+            "ByRecyclerView"                       : 'com.github.youlookwhat:ByRecyclerView:1.3.0',
 
+            //RXhttp
+            "RxHttp"                               : "com.github.liujingxing.rxhttp:rxhttp:2.8.6",
+            "Rxhttp_compiler"                      : "com.github.liujingxing.rxhttp:rxhttp-compiler:2.8.6",
+
+            //DialogX
+            "DialogX"                              : "com.github.kongzue.DialogX:DialogX:$dialogx_version",
+            "DialogX_STYLE_IOS"                     : "com.github.kongzue.DialogX:DialogXIOSStyle:$dialogx_version"
     ]
 
 }

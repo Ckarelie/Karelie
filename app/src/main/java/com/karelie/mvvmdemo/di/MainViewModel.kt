@@ -15,4 +15,14 @@ class MainViewModel : BaseViewModel() {
             userLiveData.value = it
         })
     }
+
+    fun loginCoroutime(username: String,password: String){
+        launchWithLoading(requestBlock = {
+            repository.login(username,password)
+        },resultCallback = {
+            userLiveData.value = it
+        })
+    }
+
+
 }

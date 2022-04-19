@@ -4,7 +4,7 @@
     <item
         android:id="@+id/menu_main"
         android:enabled="true"
-        android:icon="@drawable/main_input_bg"
+        android:icon="@mipmap/home_icon"
         android:title="主页"
         app:showAsAction="ifRoom"
         />
@@ -12,7 +12,7 @@
     <item
         android:id="@+id/menu_mine"
         android:enabled="true"
-        android:icon="@color/background_info"
+        android:icon="@mipmap/mine_icon"
         android:title="我的"
         app:showAsAction="ifRoom"
         />

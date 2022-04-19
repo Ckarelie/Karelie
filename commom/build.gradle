@@ -26,6 +26,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
         useIR = true
+        freeCompilerArgs = ["-Xcontext-receivers"]
     }
 
     buildFeatures {
@@ -35,7 +36,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.5"
+        kotlinCompilerExtensionVersion = "1.1.1"
         kotlinCompilerVersion "$rootProject.ext.kotlin_version"
     }
 
