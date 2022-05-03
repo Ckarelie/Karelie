@@ -92,7 +92,9 @@ ext {
             "DialogX_STYLE_IOS"                    : "com.github.kongzue.DialogX:DialogXIOSStyle:$dialogx_version",
 
             //缺省页
-            "StateLayout"                          : 'com.github.liangjingkanji:StateLayout:1.2.0'
+            "StateLayout"                          : 'com.github.liangjingkanji:StateLayout:1.2.0',
+            //BRV
+            "BRV":'com.github.liangjingkanji:BRV:1.3.63'
     ]
 
 }

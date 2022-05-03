@@ -135,6 +135,8 @@ dependencies {
 
     //缺省页
     api "$rootProject.ext.dependenciess.StateLayout"
+    //BRV
+    api "$rootProject.ext.dependenciess.BRV"
 
 }
 repositories {
