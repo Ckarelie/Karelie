@@ -89,7 +89,10 @@ ext {
 
             //DialogX
             "DialogX"                              : "com.github.kongzue.DialogX:DialogX:$dialogx_version",
-            "DialogX_STYLE_IOS"                     : "com.github.kongzue.DialogX:DialogXIOSStyle:$dialogx_version"
+            "DialogX_STYLE_IOS"                    : "com.github.kongzue.DialogX:DialogXIOSStyle:$dialogx_version",
+
+            //缺省页
+            "StateLayout"                          : 'com.github.liangjingkanji:StateLayout:1.2.0'
     ]
 
 }

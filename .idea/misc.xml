@@ -18,6 +18,9 @@
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/app/src/main/res/xml/provider_paths.xml" value="0.17477203647416414" />
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/item_title_commom.xml" value="0.3229166666666667" />
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/layout_base.xml" value="0.3179347826086957" />
+        <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/layout_data_error.xml" value="0.3079710144927536" />
+        <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/layout_loading.xml" value="0.3079710144927536" />
+        <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/layout_network_error.xml" value="0.3079710144927536" />
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/widget_karelietopbar.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/commom/src/main/res/layout/widget_karelietopbara.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Karelie/AndroidStudioProjects/MvvmApplication/secondmoudle/src/main/res/layout/layout_second.xml" value="0.3278985507246377" />

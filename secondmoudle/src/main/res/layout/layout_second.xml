@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <data>
 
@@ -7,12 +10,64 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
         <com.karelie.commom.widget.KarelieTopBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ktp_secondmoudle"
             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn_second_dataError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载数据异常"
+                />
+
+            <Button
+                android:id="@+id/btn_second_netError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载网络异常"
+                />
+
+            <Button
+                android:id="@+id/btn_second_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载"
+                />
+
+
+        </LinearLayout>
+
+        <com.drake.statelayout.StateLayout
+            android:id="@+id/sl_secondactivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:empty_layout="@layout/layout_data_error"
+            app:error_layout="@layout/layout_network_error"
+            app:loading_layout="@layout/layout_loading"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="啊对对对"
+                />
+
+
+        </com.drake.statelayout.StateLayout>
+
     </LinearLayout>
 </layout>

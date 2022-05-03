@@ -133,6 +133,9 @@ dependencies {
     api "$rootProject.ext.dependenciess.RxHttp"
     kapt "$rootProject.ext.dependenciess.Rxhttp_compiler"
 
+    //缺省页
+    api "$rootProject.ext.dependenciess.StateLayout"
+
 }
 repositories {
     mavenCentral()

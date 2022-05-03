@@ -23,6 +23,7 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import org.koin.dsl.module
 
+
 class KarelieApp: Application() {
 
     override fun onCreate() {
@@ -81,3 +82,6 @@ class KarelieApp: Application() {
         }
     }
 }
+
+@JvmInline
+value class A(val a:String)
