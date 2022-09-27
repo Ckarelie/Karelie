@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/arch" />
             <option value="$PROJECT_DIR$/commom" />
+            <option value="$PROJECT_DIR$/mvvm" />
             <option value="$PROJECT_DIR$/secondmoudle" />
             <option value="$PROJECT_DIR$/service" />
           </set>
